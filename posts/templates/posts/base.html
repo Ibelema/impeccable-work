@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>NewsLetter</title>
+    </head>
+    <body>
+        <div>
+            <header>
+                <div class="nav-left">
+                    <h1><a href="{% url 'posts:homepage' %}">Home Page</a></h1>
+                </div>
+                <div class="nav-right">
+                    <a href="{% url 'posts:new_post' %}"> New Article</a>
+                </div>
+            </header>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

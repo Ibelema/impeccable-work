@@ -1,0 +1,13 @@
+{% extends 'posts/base.html' %}
+
+
+{% block content %}
+    <p>This is the homepage of my very first blog. </p>
+    <p>You're welcome, do well to read and give your review</p>
+    {% for post in object_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post_article' article.pk %}">{{ article.title }}</a></h2>
+            <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
